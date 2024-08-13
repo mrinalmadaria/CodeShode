@@ -1,0 +1,111 @@
+body{
+    background-color: #6a0dad;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    /* box-shadow: 0 0 10px grey; */
+    width: 300px;
+}
+
+h1{
+    color: #6a0dad;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#taskInput{
+    width: 92%;
+    padding: 10px;
+    border: 2px solid #6a0dad;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#addTaskBtn{
+    width: 100%;
+    padding: 10px;
+    background-color: #6a0dad;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#downloadBtn{
+    width: 100%;
+    padding: 10px;
+    color: white;
+    background-color: #674188;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+#taskList{
+    list-style-type: none;
+    padding: 0;
+}
+
+#taskList li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+#taskList li .task-text{
+    flex-grow: 1;
+    padding-left: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.checkbox{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #6a0dad;
+    position: relative;
+    cursor: pointer;
+}
+
+.checkbox.checked::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: #6a0dad;
+    border-radius: 50px;
+    transform: translate(-50%, -50%);
+}
+
+.task-text.completed{
+    text-decoration: line-through;
+    color: #999;
+}
+
+.delete-btn{
+    background-color: transparent;
+    border: none;
+    color: #ff0000;
+    font-size: 16px;
+    cursor: pointer;
+    
+}
