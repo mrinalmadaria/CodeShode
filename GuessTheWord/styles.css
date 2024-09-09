@@ -1,0 +1,31 @@
+body{
+    display: flex;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    width: 30%;
+    border-radius: 20px;
+    padding: 2%;
+    background-color: #E3E1D9;
+}
+
+h1{
+    color: green;
+    font-size: xx-large;
+}
+
+input{
+    width: 30px;
+    padding: 1%;
+    font-size: large;
+    text-align: center;
+    margin-left: 2%;
+}
+
+#displayWord{
+    font-size: xx-large;
+}
