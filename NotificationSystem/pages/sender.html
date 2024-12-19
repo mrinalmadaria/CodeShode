@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notification Sender</title>
+</head>
+<body>
+    <h1>Notification Sender</h1>
+    <input type="text" id="message" placeholder="Enter a notification" />
+    <br>
+    <button id="send">Send</button>
+
+    <script>
+        const ws = new WebSocket('ws://localhost:8080');
+
+        ws.onopen = () => {
+            console.log("Connected to WS server")
+        };
+
+        ws.onclose = () => {
+            console.log("Disconnected from the WS server");
+        };
+
+        document.getElementById('send').addEventListener('click', ()=>{
+            const message = document.getElementById('message').value;
+
+            if(message.trim()){
+                ws.send(message);
+                document.getElementById('message').value = ''; // clear input box
+            }else{
+                alert("Enter a notification");
+            }
+        });
+    </script>
+</body>
+</html>
